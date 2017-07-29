@@ -1,5 +1,4 @@
 //var Vue = require('vue/dist/vue.min');
-var Vue = require('vue/dist/vue');
 var VueMaterial = require('vue-material');
 
 Vue.use(VueMaterial);

@@ -11,7 +11,8 @@
     "watch-css": "node-sass -w index.scss -o dist/ --output-style compressed",
     "bundle-js": "browserify -g [envify purge --NODE_ENV production] -e index.js | uglifyjs -cm > dist/bundle.js",
     "watch-js": "watchify index.js -d -o dist/bundle.js -v",
-    "watch-all": "concurrently \"npm run watch-js\" \"npm run watch-css\""
+    "lite-server": "lite-server",
+    "watch-all": "concurrently \"npm run watch-js\" \"npm run watch-css\" \"npm run lite-server\""
   },
   "dependencies": {
     "vue-material": "^0.7.4"
@@ -20,6 +21,7 @@
     "browserify": "^14.4.0",
     "concurrently": "^3.5.0",
     "envify": "^4.1.0",
+    "lite-server": "^2.3.0",
     "node-sass": "^4.5.3",
     "uglify-js": "^3.0.26",
     "watchify": "^3.9.0"

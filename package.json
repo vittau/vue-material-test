@@ -1,0 +1,27 @@
+{
+  "name": "vuematerial",
+  "version": "0.0.1",
+  "description": "Test of the Vue Material framework",
+  "main": "index.js",
+  "author": "Vitor Machado",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run watch-all",
+    "build-css": "node-sass index.scss -o dist/ --output-style compressed",
+    "watch-css": "node-sass -w index.scss -o dist/ --output-style compressed",
+    "bundle-js": "browserify -g [envify purge --NODE_ENV production] -e index.js | uglifyjs -cm > dist/bundle.js",
+    "watch-js": "watchify index.js -d -o dist/bundle.js -v",
+    "watch-all": "concurrently \"npm run watch-js\" \"npm run watch-css\""
+  },
+  "dependencies": {
+    "vue-material": "^0.7.4"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "concurrently": "^3.5.0",
+    "envify": "^4.1.0",
+    "node-sass": "^4.5.3",
+    "uglify-js": "^3.0.26",
+    "watchify": "^3.9.0"
+  }
+}

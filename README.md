@@ -1,5 +1,5 @@
 # vue-material-test
-Just a test of the Vue Material framework.
+Just a test of the [Vue Material](https://github.com/vuematerial/vue-material) framework.
 
 Usage:
 - Create a 'dist' folder or else watchify will fail to create the bundle.js;
